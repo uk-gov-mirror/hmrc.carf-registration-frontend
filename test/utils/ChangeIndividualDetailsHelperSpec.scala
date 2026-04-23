@@ -25,9 +25,9 @@ import play.api.i18n.Messages
 import uk.gov.hmrc.govukfrontend.views.Aliases.Text
 import uk.gov.hmrc.govukfrontend.views.viewmodels.summarylist.SummaryListRow
 
-class ChangeDetailsHelperSpec extends SpecBase {
+class ChangeIndividualDetailsHelperSpec extends SpecBase {
 
-  val testHelper                  = new ChangeDetailsHelper()
+  val testHelper                  = new ChangeIndividualDetailsHelper()
   implicit val messages: Messages = messages(app)
 
   def compareRowsToExpected(

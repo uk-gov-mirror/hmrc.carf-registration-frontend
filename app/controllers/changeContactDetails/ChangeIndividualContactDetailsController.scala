@@ -28,18 +28,18 @@ import play.api.mvc.{Action, AnyContent, MessagesControllerComponents}
 import services.SubscriptionService
 import uk.gov.hmrc.govukfrontend.views.viewmodels.summarylist.SummaryListRow
 import uk.gov.hmrc.play.bootstrap.frontend.controller.FrontendBaseController
-import utils.ChangeDetailsHelper
+import utils.ChangeIndividualDetailsHelper
 import views.html.ChangeIndividualContactDetailsView
 
 import scala.concurrent.{ExecutionContext, Future}
 
 class ChangeIndividualContactDetailsController @Inject() (
-    val controllerComponents: MessagesControllerComponents,
-    carfIdRetrieval: CarfIdRetrievalAction,
-    changeDetailsDataRequiredAction: ChangeDetailsDataRequiredAction,
-    subscriptionService: SubscriptionService,
-    changeDetailsHelper: ChangeDetailsHelper,
-    view: ChangeIndividualContactDetailsView
+                                                           val controllerComponents: MessagesControllerComponents,
+                                                           carfIdRetrieval: CarfIdRetrievalAction,
+                                                           changeDetailsDataRequiredAction: ChangeDetailsDataRequiredAction,
+                                                           subscriptionService: SubscriptionService,
+                                                           changeDetailsHelper: ChangeIndividualDetailsHelper,
+                                                           view: ChangeIndividualContactDetailsView
 )(implicit ec: ExecutionContext)
     extends FrontendBaseController
     with I18nSupport

@@ -32,7 +32,7 @@ import play.api.test.Helpers.*
 import services.SubscriptionService
 import uk.gov.hmrc.govukfrontend.views.Aliases.Text
 import uk.gov.hmrc.govukfrontend.views.viewmodels.summarylist.{Key, SummaryListRow}
-import utils.ChangeDetailsHelper
+import utils.ChangeIndividualDetailsHelper
 import viewmodels.govuk.summarylist.*
 import views.html.ChangeIndividualContactDetailsView
 
@@ -217,13 +217,13 @@ class ChangeIndividualContactDetailsControllerSpec extends SpecBase {
 
   class Setup(userAnswers: UserAnswers) {
     final val mockSubscriptionService = mock[SubscriptionService]
-    final val mockChangeDetailsHelper = mock[ChangeDetailsHelper]
+    final val mockChangeDetailsHelper = mock[ChangeIndividualDetailsHelper]
 
     val application: Application =
       applicationBuilder(userAnswers = Some(userAnswers))
         .overrides(
           bind[SubscriptionService].toInstance(mockSubscriptionService),
-          bind[ChangeDetailsHelper].toInstance(mockChangeDetailsHelper),
+          bind[ChangeIndividualDetailsHelper].toInstance(mockChangeDetailsHelper),
           bind[Navigator].toInstance(new FakeNavigator(onwardRoute)),
           bind[Clock].toInstance(clock)
         )

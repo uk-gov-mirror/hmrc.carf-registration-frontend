@@ -18,7 +18,6 @@ package viewmodels.checkAnswers.changeContactDetails
 
 import models.UserAnswers
 import pages.changeContactDetails.ChangeDetailsIndividualPhoneNumberPage
-import pages.individual.IndividualPhoneNumberPage
 import play.api.i18n.Messages
 import play.twirl.api.HtmlFormat
 import uk.gov.hmrc.govukfrontend.views.viewmodels.content.HtmlContent
